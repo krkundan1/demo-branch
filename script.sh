@@ -7,4 +7,5 @@ echo $updated_version
 
 sed -i -r "s/^(version ).*/\1$updated_version/" /c/Users/kundan.kumar09/demo-branch/f1
 git add .
-git status
+git commit -m "updated_version"
+git push
