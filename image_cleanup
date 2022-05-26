@@ -1,0 +1,8 @@
+#! /bin/bash
+if [[ "$(docker ps -a | wc -l)" != 1 ]]; then
+  docker stop $(docker ps -aq)
+fi
+
+if [[ "$(docker images | grep "cni" )" != "" ]]; then
+  docker rmi -f $(docker images | grep "cni")
+fi
